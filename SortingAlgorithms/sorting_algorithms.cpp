@@ -6,7 +6,22 @@
 
 using namespace std;
 
-int countLines(string fname){	ifstream file;	file.open(fname);	if (file.is_open())	{		int val;		int count = 0;		while (file >> val)			count++;		file.close();		return count;	}	else		return 0;}
+int countLines(string fname)
+{
+	ifstream file;
+	file.open(fname);
+	if (file.is_open())
+	{
+		int val;
+		int count = 0;
+		while (file >> val)
+			count++;
+		file.close();
+		return count;
+	}
+	else
+		return 0;
+}
 
 int* readFile(string fname, int count){
 	ifstream file;
